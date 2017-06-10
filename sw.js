@@ -5,12 +5,24 @@ this.addEventListener('install', function(e) {
         return cache.addAll([
             '/',
             '/index.html',
-            '/sw.js'
+            '/sw.js',
+            '/css/bootstrap.css',
+            '/css/bootstrap.min.css',
+            '/css/simple-sidebar.css',
+            '/js/bootstrap.js',
+            '/js/bootstrap.min.js',
+            '/js/jquery.js',
+            '/fonts/glyphicons-halflings-regular.eot',
+            '/fonts/glyphicons-halflings-regular.svg',
+            '/fonts/glyphicons-halflings-regular.ttf',
+            '/fonts/glyphicons-halflings-regular.woff',
+            '/fonts/glyphicons-halflings-regular.woff2',
         ]);
     }))
 });
 
 this.addEventListener('fetch', function(e) {
+    console.log(e.request.url);
     var tryInCachesFirst = caches.open(VERSION).then(cache => {
         return cache.match(e.request).then(response => {
             if (!response) {
