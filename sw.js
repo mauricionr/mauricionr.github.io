@@ -1,6 +1,6 @@
 var VERSION = '1';
 
-this.addEventListener('install', function(e) {
+this.addEventListener('install', function (e) {
     e.waitUntil(caches.open(VERSION).then(cache => {
         return cache.addAll([
             '/',
@@ -21,23 +21,25 @@ this.addEventListener('install', function(e) {
     }))
 });
 
-this.addEventListener('fetch', function(e) {
+this.addEventListener('fetch', function (e) {
     console.log(e.request.url);
-    var tryInCachesFirst = caches.open(VERSION).then(cache => {
-        return cache.match(e.request).then(response => {
-            if (!response) {
-                return handleNoCacheMatch(e);
-            }
-            // Update cache record in the background
-            fetchFromNetworkAndCache(e);
-            // Reply with stale data
-            return response
+    if (e.request.url.indexOf('lorempixel') === -1) {
+        var tryInCachesFirst = caches.open(VERSION).then(cache => {
+            return cache.match(e.request).then(response => {
+                if (!response) {
+                    return handleNoCacheMatch(e);
+                }
+                // Update cache record in the background
+                fetchFromNetworkAndCache(e);
+                // Reply with stale data
+                return response
+            });
         });
-    });
-    e.respondWith(tryInCachesFirst);
+        e.respondWith(tryInCachesFirst);
+    }
 });
 
-this.addEventListener('activate', function(e) {
+this.addEventListener('activate', function (e) {
     e.waitUntil(caches.keys().then(keys => {
         return Promise.all(keys.map(key => {
             if (key !== VERSION)
