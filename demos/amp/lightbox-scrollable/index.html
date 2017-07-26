@@ -21,45 +21,235 @@
               .rating-percent.rating-1 {
                 width:20%
               }
-            
+            .recommendations-item {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+.recommendations-item .price {
+  color: #039be6;
+  margin-top: .3rem;
+}
+.recommendations-item a {
+  padding: 1rem;
+  display: block;
+  color: #333;
+  line-height: 1.25;
+  text-decoration: none;
+}
+.recommendations-item amp-img {
+  float: left;
+}
+.recommendations-item .search-info {
+  padding-left: 5.5rem;
+}
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
-	  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <link rel="canonical" href="https://mauricionr.github.io/demos/amp" itemprop="url">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
 
   <body id="body">
-    <amp-lightbox id="search-results" layout="nodisplay">
+    <amp-lightbox id="search-results" layout="nodisplay" scrollable>
         <section class="modal-content search">
           <div class="search">
             <form id="input-search" role="search" target="_top" action="/busca" method="get">
               <input id="search-field" on="change:AMP.setState({term: { q : event.value } })" type="search" name="q" placeholder="O que seu pet precisa?" autocomplete="off" class="white" autofocus />
-              <span class="clear icon-search submit material-icons" role="button" tabindex="1" on="tap:input-search.submit">search</span>
-              <span class="clear icon-search material-icons" role="button" tabindex="1" on="tap:search-results.close">close</span>
             </form>
           </div>
+          <amp-list
+              height="400px"
+              src="/fake.json"
+              class="search-suggestions"
+              layout="fixed-height">
+               <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/1/" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/2" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/3" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/4" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/5" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/6" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/7" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/8" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/9" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/10" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/11" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/12" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/13" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/14" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/15" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/16" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/17" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/18" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/19" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="recommendations-item">
+                  <a class="item" href="#">
+                    <amp-img src="//lorempixel.com/400/200/sports/20" width=40 height=40></amp-img>
+                    <div class="search-info">
+                      <div>Description</div>
+                      <div class="price">$100.00</div>
+                    </div>
+                  </a>
+                </div>
+
+              </amp-list> 
         </section>
       </amp-lightbox>
-      <amp-lightbox id="ship-rules" layout="nodisplay">
-        <section class="modal-content">
-          <span class="icon-close" role="button" tabindex="0" on="tap:ship-rules.close">
-            <span class="material-icons">close</span>
-          </span>
-          <div class="modal-container">
-            <p class="title">Política de frete grátis</p>
-            <p>- <b>Grande São Paulo:</b> frete grátis para pedidos acima de <b>R$119,00</b></p>
-            <p>- <b>Interior / litoral de SP e em todo estado do RJ:</b> frete grátis para pedidos acima de <b>R$189,00</b></p>
-            <p>- <b>Estados do ESMGPRSCDF e RS:</b> frete grátis para pedidos acima de <b>R$299,00</b></p>
-            <p>Os agentes de carga serão escolhidos automaticamente de acordo com o pedido (peso ou cubagem) e cep de destino. Reservamo-nos ao direito de alterar a política de frete grátis sem aviso prévio.</p>
-          </div>
-        </section>
-      </amp-lightbox>
-      <h1>Bug demo</h1>
+      <h1>Lightbox with scrollable and amp-img</h1>
       <button on="tap:search-results" role="button" tabindex="0" type="button">Open search lightbox</button>
-      <br>
-      <button on="tap:ship-rules" role="button" tabindex="1" type="button">Open shipping lightbox</button>
   </body>
 </html>
