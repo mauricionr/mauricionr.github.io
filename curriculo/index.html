@@ -8,6 +8,8 @@
 <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="description" content="My CV | Maurício nunes dos reis">
@@ -50,19 +52,51 @@
             padding: 1rem 1rem 0rem 1rem;
             margin: 0 auto;
         }
+        amp-sidebar {
+            width: 250px;
+            padding-right: 10px;
+        }
+        .amp-sidebar-image {
+            line-height: 100px;
+            vertical-align:middle;
+        }
+        .amp-close-image {
+            top: 15px;
+            left: 225px;
+            cursor: pointer;
+        }
+        li {
+            margin-bottom: 20px;
+            list-style: none;
+        }
+        
     </style>
 
 </head>
 
 <body>
-
+    <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+      <ul>
+        <li><a on="tap:init.scrollTo">Home</a></li>
+        <li><a on="tap:summary.scrollTo">Short description</a></li>
+        <li><a on="tap:skills.scrollTo">Skills</a></li>
+        <li><a on="tap:experiences.scrollTo">Experiences</a></li>
+        <li><a on="tap:last-experience.scrollTo">Last experience</a></li>
+        <li><a on="tap:previous.scrollTo">Previous</a></li>
+        <li><a on="tap:cerfied.scrollTo">Certified</a></li>
+        <li><a on="tap:language.scrollTo">Language</a></li>
+      </ul>
+    </amp-sidebar>
     <main>
-        <header>
+        <header id="init">
             <div class="heading">
                 <!-- <amp-img width="80" height="80" layout="fixed" src="//avatars0.githubusercontent.com/u/2263551?v=4&u=48cc208e9ae585982f7e8d855560b8a0f537935c&s=400"></amp-img> -->
                 <h1 class="header">
                     Maurício nunes dos reis
                 </h1>
+                <span>
+                    <button on="tap:sidebar.toggle" class="ampstart-btn caps m2">Toggle sidebar</button>
+                </span>
             </div>
             <div class="clear-both"></div>
             <div class="info">
@@ -77,22 +111,24 @@
                     <strong>Skype:</strong> mamaskt10
                 </p>
             </div>
-
         </header>
 
-        <p id="summary">
+        <h2 id="summary">Short description</h2>
+        <p>
             Hi, My name is Maurício nunes dos reis, i'm from São paulo and i was born in Piquete - São Paulo. <br> The main
             things in my life is my family, travel, web programming, build bots/chatbots, solve problems, automate things,
             contribute to open source projects, soccer and made my own beer.
         </p>
 
-        <h2>Skills</h2>
+        <h2 id="skills">Skills</h2>
         <p>JavaScript(ES5/ES6/ES7/ES8), NodeJS, HTML5, CSS3/4, Sass/Less, Service worker API, Credentials API, Web Payments
             API, REST API's, MarkoJS, ReactJS, AngularJS, VueJS, Ionic, PWA, NoSQL, PostGreSQL, Firebase, Linux, NGINX, Varnish,
             Scrum, Git/Github, Tests, Chatbots, Web RTC, AMP, Code review, Pair programming, Social coding, Self-taught,
-            BabelJS, GulpJS </p>
+            BabelJS, GulpJS
+         </p>
+            
 
-        <h2>Experiences</h2>
+        <h2 id="experiences">Experiences</h2>
         <p>
             <strong>Current:</strong> Petlove <br>
             <strong>Start Date:</strong> 02/2017 <br>
@@ -101,7 +137,7 @@
             to support PWA/Service worker, Credentials API, AMP, Web payments API and all cutting edge Web API's
         </p>
 
-        <h3>Last Experience:</h3>
+        <h3 id="last-experience">Last Experience:</h3>
         <p>
             <strong>Mult-Connect</strong> <br>
             <strong>Start Date:</strong>09/2014. <br>
@@ -121,7 +157,7 @@
 
         </p>
 
-        <h3>Previous Experiences:</h3>
+        <h3 id="previous">Previous Experiences:</h3>
         <p>
             <strong>Simbiox:</strong> Front-end Developer / SharePoint Developer <br>
             <strong>Start Date:</strong>09/2016. <br>
@@ -140,33 +176,30 @@
             <strong>End Date:</strong>09/2014. <br> Creating custom solutions like intranet, portals using sharepoint javascript
             library and consuming the REST API’s
         </p>
-
         <p>
             <strong>Done IT:</strong> Front-end Developer / SharePoint Developer <br>
             <strong>Start Date:</strong>05/2013. <br>
             <strong>End Date:</strong>10/2013. <br> Creating custom solutions like intranet, portals using sharepoint javascript
             library and JQuery
         </p>
-
         <p>
             <strong> Brisa/LG:</strong> QA Tester <br>
             <strong>Start Date:</strong>09/2012. <br>
             <strong>End Date:</strong>05/2013. <br>
             Testing LG smartphones, finding bugs, reporting bugs for developers in korea
         </p>
-
         <p>
             <strong> Samsung: </strong> Technical support for customers <br>
             <strong>Start Date:</strong>01/2012. <br>
             <strong>End Date:</strong>09/2012. <br>
         </p>
 
-        <h3>Certified:</h3>
+        <h3 id="cerfied">Certified:</h3>
         <p>
             ISTQB - International software Testing Qualifications Board(12-CTFL-02221-BR).
         </p>
 
-        <h3>Language: </h3>
+        <h3 id="language">Language: </h3>
         <p>
             English - intermadiate/advanced <br> Portuguese - Native
         </p>
