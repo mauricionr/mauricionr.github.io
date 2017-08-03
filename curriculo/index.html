@@ -77,7 +77,7 @@
         #menu-btn amp-img {
             width: 66px;
             height: 94px;
-            position: absolute;
+            position: fixed;
             right: 0;
             top: -24px;
         }
@@ -111,7 +111,7 @@
                 <h1 class="header">
                     Maurício nunes dos reis
                 </h1>
-                <span id="menu-btn" on="tap:sidebar.toggle">
+                <span id="menu-btn" on="tap:sidebar.toggle" role="button" tabindex="1">
                     <amp-img class="ampstart-btn" src="/images/menu.png" width="66" height="94" layout="fixed"></amp-img>
                 </span>
             </div>
