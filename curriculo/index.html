@@ -1,0 +1,217 @@
+<!-- ## Introduction -->
+
+<!-- This is a sample template for a news article in AMP. It demonstrates the usage of AMP components which works well in news articles. Examples include social sharing, image galleries, personalized content, ads, and more.  -->
+<!-- -->
+<!doctype html>
+<html ⚡>
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- ## Setup -->
+    <!--
+        All additionally used AMP components must be imported in the header.
+      -->
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
+    <link rel="canonical" href="https://mauricionr.github.io/curriculo/index.html">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <style amp-custom>
+        html {
+            box-sizing: border-box;
+            font-family: Roboto;
+        }
+        main>p,
+        main>div,
+        main>h2,
+        main>h3 {
+            padding: 1rem 1rem 0 1rem;
+        }
+
+        amp-user-notification {
+            padding: 8px;
+            background: #bbb;
+            text-align: center;
+            color: white;
+        }
+
+        figure>figcaption {
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        figure{
+            margin-bottom: 1rem;
+        }
+
+        header {
+            padding: 1rem;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="heading">
+                <!-- <amp-img width="80" height="80" layout="fixed" src="//avatars0.githubusercontent.com/u/2263551?v=4&u=48cc208e9ae585982f7e8d855560b8a0f537935c&s=400"></amp-img> -->
+                <h1 class="header">
+                    Maurício nunes dos reis
+                </h1>
+            </div>
+            <div class="clear-both"></div>
+            <div class="info">
+                <p>
+                    26 years old, Single. <br>
+                    <strong>Address:</strong> São Paulo - Pinheiros <br>
+                    <strong>Phone:</strong> <a href="tel:+55110963314092">+55110963314092</a> <br>
+                    <strong>E-mail:</strong> <a href="mailto:mauricioskateboard@gmail.com ">mauricioskateboard@gmail.com </a><br>
+                    <strong>Github:</strong> <a href="https://github.com/mauricionr">mauricionr</a> <br>
+                    <strong>Linkdin:</strong> <a href="https://br.linkedin.com/in/mauricio-reis-8b885352">https://mauricionr.github.io/</a>                    <br>
+                    <strong>Site:</strong> <a href="https://mauricionr.github.io/">https://mauricionr.github.io/</a> <br>
+                    <strong>Skype:</strong> mamaskt10
+                </p>
+            </div>
+
+        </header>
+        <!-- ## Social Sharing  -->
+
+        <!-- The Social Share extension provides a common interface for share buttons.  Learn more about `amp-social-share` [here](/components/amp-social-share/).  -->
+        <p class="share-container">
+            <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
+            <amp-social-share type="facebook" width="45" height="33" data-attribution="254325784911610"></amp-social-share>
+            <amp-social-share type="gplus" width="45" height="33"></amp-social-share>
+            <amp-social-share type="email" width="45" height="33"></amp-social-share>
+            <amp-social-share type="pinterest" width="45" height="33"></amp-social-share>
+        </p>
+
+        <p id="summary">
+            Hi, My name is Maurício nunes dos reis, i'm from São paulo and i was born in Piquete - São Paulo. <br> The main
+            things in my life is my family, travel, web programming, build bots/chatbots, solve problems, automate things,
+            contribute to open source projects, soccer and made my own beer.
+        </p>
+
+        <figure id="figure-image">
+            <amp-img src="//farm7.static.flickr.com/6227/6274746920_9972b73931.jpg" width="1280" height="768" layout="responsive"></amp-img>
+            <figcaption>Piquete - SP</figcaption>
+        </figure>
+
+        <h2>Skills</h2>
+        <p>JavaScript(ES5/ES6/ES7/ES8), NodeJS, HTML5, CSS3/4, Sass/Less, Service worker API, Credentials API, Web Payments
+            API, REST API's, MarkoJS, ReactJS, AngularJS, VueJS, Ionic, PWA, NoSQL, PostGreSQL, Firebase, Linux, NGINX, Varnish,
+            Scrum, Git/Github, Tests, Chatbots, Web RTC, AMP, Code review, Pair programming, Social coding, Self-taught,
+            BabelJS, GulpJS </p>
+        <div>
+            <amp-carousel width="1280" height="800" layout="responsive" type="slides">
+                <figure>
+                    <amp-img src="//i.ytimg.com/vi/JZ076FR-v0w/maxresdefault.jpg" width="1280" height="857" layout="responsive"></amp-img>
+                    <figcaption>More piqute images</figcaption>
+                </figure>
+                <figure>
+                    <amp-img src="//www.achetudoeregiao.com.br/sp/piquete/piquete.gif/portico1.jpg" width="1280" height="853" layout="responsive"></amp-img>
+                    <figcaption>This caption is different.</figcaption>
+                </figure>
+                <figure>
+                    <amp-img src="//www.classelider.com/attach/noticia/id12478img1.jpg" width="1280" height="853" layout="responsive"></amp-img>
+                    <figcaption>The third image has its caption.</figcaption>
+                </figure>
+            </amp-carousel>
+        </div>
+
+        <h2>Experiences</h2>
+        <p>
+            <strong>Current:</strong> Petlove <br>
+            <strong>Start Date:</strong> 02/2017 <br>
+            <strong>End Date:</strong> - <br>
+            <strong>Role:</strong> Front-end developer working with JS/NodeJS, Rails, AMP Project Projects: ecommerce improvements
+            to support PWA/Service worker, Credentials API, AMP, Web payments API and all cutting edge Web API's
+        </p>
+
+        <h3>Last Experience:</h3>
+        <p>
+            <strong>Mult-Connect</strong> <br>
+            <strong>Start Date:</strong>09/2014. <br>
+            <strong>End Date:</strong>08/2016. <br> 
+            creating bots with nodejs, progressive web apps, hybrid app with ionic,
+
+            <strong>Role:</strong> Full-Stack Developer / SharePoint Developer. <br>
+            <strong>Projects:</strong> Focused in new apps and also sharepoint <br>
+            <a href="http://ypostapp.com.br">http://ypostapp.com.br</a> i created ypost with nodejs and react,
+            manage ypost infrastructure with microsoft azure, 
+            integrate ypost with sharepoint using them as a service <br> 
+            <a href="http://www.h9j.com.br">http://www.h9j.com.br</a> Integrations with .net wcf and consuming the rest endpoint with
+            angular <br> 
+            <a href="http://virtualclasses.com.br">http://virtualclasses.com.br</a> Sharepoint app using angular <br> 
+            <a href="http://intranetin.com.br/">http://intranetin.com.br/</a> Intranet
+            solution built on top of sharepoint <br>
+            <a href="https://www.santanderuniversidades.com.br/">https://www.santanderuniversidades.com.br/</a> Portal using sharepoint <br>            
+            <a href="http://www.apaesp.org.br">http://www.apaesp.org.br</a> Portal using sharepoint and angualrjs
+
+        </p>
+
+        <h3>Previous Experiences:</h3>
+        <p>
+            <strong>Simbiox:</strong> Front-end Developer / SharePoint Developer <br>
+            <strong>Start Date:</strong>09/2016. <br>
+            <strong>End Date:</strong>02/2017. <br> Creating custom solutions like intranet, portals using sharepoint javascript
+            library and consuming the REST API’s
+        </p>
+        <p>
+            <strong>Lenord:</strong> Freelancer Full Stack developer <br>
+            <strong>Start Date:</strong>09/2014. <br>
+            <strong>End Date:</strong>08/2016. <br> Creating bots with nodejs, progressive web apps, hybrid app with ionic,
+            API’s with rails and mysql
+        </p>
+        <p>
+            <strong>Simbiox:</strong> Front-end Developer / SharePoint Developer <br>
+            <strong>Start Date:</strong>10/2013. <br>
+            <strong>End Date:</strong>09/2014. <br> Creating custom solutions like intranet, portals using sharepoint javascript
+            library and consuming the REST API’s
+        </p>
+
+        <p>
+            <strong>Done IT:</strong> Front-end Developer / SharePoint Developer <br>
+            <strong>Start Date:</strong>05/2013. <br>
+            <strong>End Date:</strong>10/2013. <br> Creating custom solutions like intranet, portals using sharepoint javascript
+            library and JQuery
+        </p>
+
+        <p>
+            <strong> Brisa/LG:</strong> QA Tester <br>
+            <strong>Start Date:</strong>09/2012. <br>
+            <strong>End Date:</strong>05/2013. <br>
+            Testing LG smartphones, finding bugs, reporting bugs for developers in korea
+        </p>
+
+        <p>
+            <strong> Samsung: </strong> Technical support for customers <br>
+            <strong>Start Date:</strong>01/2012. <br>
+            <strong>End Date:</strong>09/2012. <br>
+        </p>
+
+        <h3>Certified:</h3>
+        <p>
+            ISTQB - International software Testing Qualifications Board(12-CTFL-02221-BR).
+        </p>
+
+        <h3>Language: </h3>
+        <p>
+            English - intermadiate/advanced <br> Portuguese - Native
+        </p>
+
+        <amp-user-notification layout="nodisplay" id="amp-user-notification1">
+            This page might use cookies if your analytics vendor requires them.
+            <button on="tap:amp-user-notification1.dismiss">Accept</button>
+        </amp-user-notification>
+</body>
+
+</html>
