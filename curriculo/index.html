@@ -8,18 +8,16 @@
 <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <!-- ## Setup -->
-    <!--
-        All additionally used AMP components must be imported in the header.
-      -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="My CV | Maurício nunes dos reis">
+    <meta name="author" content="Maurício nunes dos reis">
+    <title>Mauricio nunes | Exemplos</title>
+
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <script async custom-element="amp-user-notification" src="https://cdn.ampproject.org/v0/amp-user-notification-0.1.js"></script>
     <link rel="canonical" href="https://mauricionr.github.io/curriculo/index.html">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
-
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
     <style amp-custom>
@@ -83,27 +81,12 @@
             </div>
 
         </header>
-        <!-- ## Social Sharing  -->
-
-        <!-- The Social Share extension provides a common interface for share buttons.  Learn more about `amp-social-share` [here](/components/amp-social-share/).  -->
-        <p class="share-container">
-            <amp-social-share type="twitter" width="45" height="33"></amp-social-share>
-            <amp-social-share type="facebook" width="45" height="33" data-attribution="254325784911610"></amp-social-share>
-            <amp-social-share type="gplus" width="45" height="33"></amp-social-share>
-            <amp-social-share type="email" width="45" height="33"></amp-social-share>
-            <amp-social-share type="pinterest" width="45" height="33"></amp-social-share>
-        </p>
 
         <p id="summary">
             Hi, My name is Maurício nunes dos reis, i'm from São paulo and i was born in Piquete - São Paulo. <br> The main
             things in my life is my family, travel, web programming, build bots/chatbots, solve problems, automate things,
             contribute to open source projects, soccer and made my own beer.
         </p>
-
-        <figure id="figure-image">
-            <amp-img src="//farm7.static.flickr.com/6227/6274746920_9972b73931.jpg" width="1280" height="768" layout="responsive"></amp-img>
-            <figcaption>Piquete - SP</figcaption>
-        </figure>
 
         <h2>Skills</h2>
         <p>JavaScript(ES5/ES6/ES7/ES8), NodeJS, HTML5, CSS3/4, Sass/Less, Service worker API, Credentials API, Web Payments
@@ -196,6 +179,12 @@
             This page might use cookies if your analytics vendor requires them.
             <button on="tap:amp-user-notification1.dismiss">Accept</button>
         </amp-user-notification>
+        
+        <figure id="figure-image">
+            <amp-img src="//farm7.static.flickr.com/6227/6274746920_9972b73931.jpg" width="1280" height="768" layout="responsive"></amp-img>
+            <figcaption>i was born here in Piquete - SP</figcaption>
+        </figure>
+
 </body>
 
 </html>
