@@ -73,6 +73,14 @@
         @media print {
             #menu-btn { display: none; }
         }
+
+        #menu-btn amp-img {
+            width: 66px;
+            height: 94px;
+            position: absolute;
+            right: 0;
+            top: -24px;
+        }
         
     </style>
 
@@ -85,14 +93,14 @@
   </amp-install-serviceworker>
     <amp-sidebar id="sidebar" layout="nodisplay" side="right">
       <ul>
-        <li><a on="tap:init.scrollTo">Home</a></li>
-        <li><a on="tap:summary.scrollTo">Short description</a></li>
-        <li><a on="tap:skills.scrollTo">Skills</a></li>
-        <li><a on="tap:experiences.scrollTo">Experiences</a></li>
-        <li><a on="tap:last-experience.scrollTo">Last experience</a></li>
-        <li><a on="tap:previous.scrollTo">Previous</a></li>
-        <li><a on="tap:cerfied.scrollTo">Certified</a></li>
-        <li><a on="tap:language.scrollTo">Language</a></li>
+        <li><a on="tap:init.scrollTo,sidebar.toggle">Home</a></li>
+        <li><a on="tap:summary.scrollTo,sidebar.toggle">Short description</a></li>
+        <li><a on="tap:skills.scrollTo,sidebar.toggle">Skills</a></li>
+        <li><a on="tap:experiences.scrollTo,sidebar.toggle">Experiences</a></li>
+        <li><a on="tap:last-experience.scrollTo,sidebar.toggle">Last experience</a></li>
+        <li><a on="tap:previous.scrollTo,sidebar.toggle">Previous</a></li>
+        <li><a on="tap:cerfied.scrollTo,sidebar.toggle">Certified</a></li>
+        <li><a on="tap:language.scrollTo,sidebar.toggle">Language</a></li>
         <li><a on="tap:sidebar.toggle">Close</a></li>
       </ul>
     </amp-sidebar>
@@ -103,8 +111,8 @@
                 <h1 class="header">
                     Maurício nunes dos reis
                 </h1>
-                <span id="menu-btn">
-                    <button on="tap:sidebar.toggle" class="ampstart-btn caps m2">Toggle sidebar</button>
+                <span id="menu-btn" on="tap:sidebar.toggle">
+                    <amp-img class="ampstart-btn" src="/images/menu.png" width="66" height="94" layout="fixed"></amp-img>
                 </span>
             </div>
             <div class="clear-both"></div>
