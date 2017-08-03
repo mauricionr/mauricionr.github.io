@@ -70,6 +70,9 @@
             margin-bottom: 20px;
             list-style: none;
         }
+        @media print {
+            #menu-btn { display: none; }
+        }
         
     </style>
 
@@ -100,7 +103,7 @@
                 <h1 class="header">
                     Maurício nunes dos reis
                 </h1>
-                <span>
+                <span id="menu-btn">
                     <button on="tap:sidebar.toggle" class="ampstart-btn caps m2">Toggle sidebar</button>
                 </span>
             </div>
