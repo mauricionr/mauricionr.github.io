@@ -117,7 +117,7 @@
         <li><a on="tap:sidebar.toggle">Close</a></li>
       </ul>
     </amp-sidebar>
-    <main class="home" [class]="current.section != 'home' ? 'not-home' : ''">
+    <main class="home" [class]="!['home', 'cert', 'lang'].includes(current.section) ? 'not-home' : ''">
         <header id="init">
             <div class="heading">
                 <span id="menu-btn" on="tap:sidebar.toggle" role="button" tabindex="1">
