@@ -80,13 +80,6 @@
             top: 0;
             font-size: 3rem;
         }
-        h1.active, h2.active, h3.active {
-            background: #000;
-            color: #fff;
-        }
-        .not-home #menu-btn i {
-            color: #fff;
-        }
         
     </style>
 
@@ -120,9 +113,9 @@
     <main class="home" [class]="!['home', 'cert', 'lang'].includes(current.section) ? 'not-home' : ''">
         <header id="init">
             <div class="heading">
-                <span id="menu-btn" on="tap:sidebar.toggle" role="button" tabindex="1">
+                <!-- <span id="menu-btn" on="tap:sidebar.toggle" role="button" tabindex="1">
                     <i class="material-icons">reorder</i>
-                </span>
+                </span> -->
                 <h1 class="header active" [class]="current.section == 'home' ? 'active header' : 'header'">
                     Maurício nunes dos reis
                 </h1>
@@ -174,14 +167,12 @@
             <strong>End Date:</strong>08/2016. <br> 
             <strong>Role:</strong> Full-Stack Developer / SharePoint Developer<br>
             <strong>Projects:</strong> Focused in new apps and also sharepoint <br>
-            <a href="http://ypostapp.com.br">http://ypostapp.com.br</a> i created ypost with nodejs and react,
+            <a href="https://www.youtube.com/watch?v=zNxKMWjkzsA">http://ypostapp.com.br</a> i created ypost with nodejs and react,
             manage ypost infrastructure with microsoft azure, 
             integrate ypost with sharepoint using them as a service <br> 
             <a href="http://www.h9j.com.br">http://www.h9j.com.br</a> Integrations with .net wcf and consuming the rest endpoint with
             angular <br> 
             <a href="http://virtualclasses.com.br">http://virtualclasses.com.br</a> Sharepoint app using angular <br> 
-            <a href="http://intranetin.com.br/">http://intranetin.com.br/</a> Intranet
-            solution built on top of sharepoint <br>
             <a href="https://www.santanderuniversidades.com.br/">https://www.santanderuniversidades.com.br/</a> Portal using sharepoint <br>            
             <a href="http://www.apaesp.org.br">http://www.apaesp.org.br</a> Portal using sharepoint and angualrjs
 
