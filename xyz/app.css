@@ -1,0 +1,22 @@
+*,:after,:before {
+    box-sizing: border-box
+}
+
+html {
+    height: 100%;
+    color: #404040;
+    font: 400 1em/1.4 'Open Sans',sans-serif;
+    text-rendering: optimizeLegibility
+}
+
+.Aligner {
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  justify-content: center;
+}
+
+.Aligner-item--fixed {
+  flex: none;
+  max-width: 50%;
+}
